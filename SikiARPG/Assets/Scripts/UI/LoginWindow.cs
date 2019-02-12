@@ -1,4 +1,4 @@
-/****************************************************
+﻿/****************************************************
     文件：LoginWind.cs
 	作者：ICE
     邮箱: 359087005@qq.com
@@ -9,15 +9,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoginWindow : MonoBehaviour 
+public class LoginWindow : GameUIRoot 
 {
     public InputField accText;
     public InputField pwdText;
     public Button enterGame;
     public Button notice;
 
-    public void InitLoginWindow()
+    protected override void InitWindow()
     {
+base.InitWindow();
         if (PlayerPrefs.HasKey("Account") && PlayerPrefs.HasKey("Password"))
         {
             accText.text = PlayerPrefs.GetString("Account");

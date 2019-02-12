@@ -1,4 +1,4 @@
-/****************************************************
+﻿/****************************************************
     文件：LoginSystem.cs
 	作者：ICE
     邮箱: 359087005@qq.com
@@ -8,13 +8,14 @@
 
 using UnityEngine;
 
-public class LoginSystem : MonoBehaviour 
+public class LoginSystem : SystemRoot
 {
     public static LoginSystem instance = null;
-    public LoginWindow lw;
+    public LoginWindow loginWindow;
 
-    public void InitLogIn()
+    public override void InitLogIn()
     {
+	base.InitSystem();
         instance = this;
         Debug.Log("LoginInit...");
     }
@@ -22,10 +23,10 @@ public class LoginSystem : MonoBehaviour
     public void EnterLogin()
     {
         //异步加载登录场景
-        ResService.instance.AsyncLoadScene(Constants.SceneLogin,()=>
+        resService.AsyncLoadScene(Constants.SceneLogin,()=>
         {
-            lw.gameObject.SetActive(true);
-            lw.InitLoginWindow();
+            loginWindow.SetWindowState();
+		AudioService.instance.PlayBGAudio(Constant.BGLogin);
         });
     }
 }

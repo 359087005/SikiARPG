@@ -1,0 +1,5 @@
+创建一个BGAudio
+创建一个UIAudio
+各个添加audiosource
+创建AudioService脚本
+添加给GameRoot物体

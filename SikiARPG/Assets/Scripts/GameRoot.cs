@@ -1,4 +1,4 @@
-/****************************************************
+﻿/****************************************************
     文件：GameRoot.cs
 	作者：ICE
     邮箱: 359087005@qq.com
@@ -28,6 +28,8 @@ public class GameRoot : MonoBehaviour
         //服务模块
         ResService res = GetComponent<ResService>();
         res.InitRes();
+	AudioService audio = GetComponent<AudioService>();	
+	audio.InitService();	
 
         //业务系统初始化
         LoginSystem login = GetComponent<LoginSystem>();

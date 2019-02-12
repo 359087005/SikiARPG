@@ -1,4 +1,4 @@
-/****************************************************
+﻿/****************************************************
     文件：Constants.cs
 	作者：ICE
     邮箱: 359087005@qq.com
@@ -11,4 +11,6 @@ using UnityEngine;
 public class Constants  
 {
     public const string SceneLogin = "SceneLogin";
+	
+	public const string BGLogin = "bgLogin";
 }

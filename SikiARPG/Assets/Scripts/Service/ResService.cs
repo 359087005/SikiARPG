@@ -1,4 +1,4 @@
-/****************************************************
+﻿/****************************************************
     文件：ResService.cs
 	作者：ICE
     邮箱: 359087005@qq.com
@@ -22,9 +22,8 @@ public class ResService : MonoBehaviour
     private Action sceneAsyncAction = null;
     public void AsyncLoadScene(string name,Action at)
     {
-        //显示进度
-        GameRoot.instance.loadingWind.Init();
-        GameRoot.instance.loadingWind.gameObject.SetActive(true);
+        //显示进度 
+        GameRoot.instance.loadingWind.SetWindowState();
 
         AsyncOperation ao =  SceneManager.LoadSceneAsync(name);
         sceneAsyncAction = () =>
@@ -39,7 +38,7 @@ public class ResService : MonoBehaviour
                 }
                 sceneAsyncAction = null;
                 ao = null;
-                GameRoot.instance.loadingWind.gameObject.SetActive(false);
+                GameRoot.instance.loadingWind.SetWindowState(false);
             }
         };
     }
@@ -50,4 +49,25 @@ public class ResService : MonoBehaviour
             sceneAsyncAction();
         }
     }
+
+	private Dictionary<string,AudioClip> audioDic = new Dictionary<string,AudioClip>();
+	public AudioClip LoadClip(string path,bool isCache = false)
+	{
+		AudioClip au = null;
+
+		if(!audioDic.TryGetValue(path,out au))
+		{	
+			au = Resources.Load<AudioClip>(path);
+			if(isCache)
+			{
+				audioDic.Add(path,au);
+			}	
+		}
+		return au;
+	}
+
+
+
+
+
 }
