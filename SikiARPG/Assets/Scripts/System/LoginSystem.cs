@@ -13,9 +13,9 @@ public class LoginSystem : SystemRoot
     public static LoginSystem instance = null;
     public LoginWindow loginWindow;
 
-    public override void InitLogIn()
+    public override void Init()
     {
-	base.InitSystem();
+        base.Init();
         instance = this;
         Debug.Log("LoginInit...");
     }
@@ -23,10 +23,13 @@ public class LoginSystem : SystemRoot
     public void EnterLogin()
     {
         //异步加载登录场景
-        resService.AsyncLoadScene(Constants.SceneLogin,()=>
-        {
-            loginWindow.SetWindowState();
-		AudioService.instance.PlayBGAudio(Constant.BGLogin);
-        });
+        resService.AsyncLoadScene(Constants.SceneLogin, () =>
+         {
+             loginWindow.SetWindowState();
+             AudioService.instance.PlayBGAudio(Constants.BGLogin);
+             GameRoot.AddTips("111");
+             GameRoot.AddTips("222");
+             GameRoot.AddTips("333");
+         });
     }
 }

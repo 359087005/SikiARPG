@@ -1,4 +1,4 @@
-﻿/****************************************************
+/****************************************************
     文件：GameUIRoot.cs
 	作者：ICE
     邮箱: 359087005@qq.com
@@ -9,26 +9,26 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoopDragonAnim : MonoBehaviour 
+public class LoopDragonAnim : MonoBehaviour
 {
-	private Animation anim;
-	private void Awake()
-	{
-		anim = this.GetComponent<Animation>();
-	}
+    private Animation anim;
+    private void Awake()
+    {
+        anim = this.GetComponent<Animation>();
+    }
 
-	private void Start()
-	{
-		if(anim!= null)
-		{InvokeRepeating("PlayDragonAnim",0,20);}
-	}
+    private void Start()
+    {
+        if (anim != null)
+        { InvokeRepeating("PlayDragonAnim", 0, 20); }
+    }
 
-	private void PlayDragonAnim()
-	{
-		if(anim!=null)
-		{
-			anim.Play();
-		}
-	
-	}
+    private void PlayDragonAnim()
+    {
+        if (anim != null)
+        {
+            anim.Play();
+        }
+
+    }
 }

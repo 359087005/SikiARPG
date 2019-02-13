@@ -1,4 +1,4 @@
-﻿/****************************************************
+/****************************************************
     文件：ResService.cs
 	作者：ICE
     邮箱: 359087005@qq.com
@@ -15,9 +15,9 @@ public class SystemRoot: MonoBehaviour
    protected ResService resService;
 	protected AudioService audioService;
 
-	public virtual void InitSystem()
+	public virtual void Init()
 	{
-		resService = ResService.insntance;
-		audioService = AudioService instance;
+		resService = ResService.instance;
+		audioService = AudioService.instance;
 	}
 }

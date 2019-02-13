@@ -300,6 +300,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Compond\Shader\MogoSkybox.shader" />
+    <None Include="Assets\Scripts\208yinxiao.txt" />
     <None Include="Assets\Scripts\81-C# Script-NewBehaviourScript.cs.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

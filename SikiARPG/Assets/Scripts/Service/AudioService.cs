@@ -1,4 +1,4 @@
-﻿/****************************************************
+/****************************************************
     文件：ResService.cs
 	作者：ICE
     邮箱: 359087005@qq.com
@@ -25,10 +25,10 @@ public class AudioService: MonoBehaviour
    
 	public void PlayBGAudio(string name,bool isloop = true)
 	{
-		AudioClip clip = ResService.instance.LoadAudio("ResAudio/" + name,true);
+		AudioClip clip = ResService.instance.LoadClip("ResAudio/" + name,true);
 		if(bgAudio.clip == null || bgAudio.clip.name != clip.name)
 		{
-			bgAudio.clip = audio;
+			bgAudio.clip = clip;
 			bgAudio.loop = isloop;
 			bgAudio.Play();
 		}
@@ -36,7 +36,7 @@ public class AudioService: MonoBehaviour
 
 	public void PlayUIAudio(string name)
 	{
-		AudioClip clip = ResService.instance.LoadAudio("ResAudio/" + name,true);
+		AudioClip clip = ResService.instance.LoadClip("ResAudio/" + name,true);
 		uiAudio.clip = clip;
 		uiAudio.Play();
 	}

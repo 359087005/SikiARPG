@@ -291,14 +291,19 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Common\Constants.cs" />
     <Compile Include="Assets\Scripts\Common\GameUIRoot.cs" />
+    <Compile Include="Assets\Scripts\Common\LoopDragonAnim.cs" />
     <Compile Include="Assets\Scripts\GameRoot.cs" />
+    <Compile Include="Assets\Scripts\Service\AudioService.cs" />
     <Compile Include="Assets\Scripts\Service\ResService.cs" />
+    <Compile Include="Assets\Scripts\Service\SystemRoot.cs" />
     <Compile Include="Assets\Scripts\System\LoginSystem.cs" />
+    <Compile Include="Assets\Scripts\UI\DynamicWindow.cs" />
     <Compile Include="Assets\Scripts\UI\LoadingWind.cs" />
     <Compile Include="Assets\Scripts\UI\LoginWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Compond\Shader\MogoSkybox.shader" />
+    <None Include="Assets\Scripts\208yinxiao.txt" />
     <None Include="Assets\Scripts\81-C# Script-NewBehaviourScript.cs.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
