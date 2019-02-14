@@ -12,6 +12,7 @@ public class LoginSystem : SystemRoot
 {
     public static LoginSystem instance = null;
     public LoginWindow loginWindow;
+    public CreatWindow creatWindow;
 
     public override void Init()
     {
@@ -27,9 +28,16 @@ public class LoginSystem : SystemRoot
          {
              loginWindow.SetWindowState();
              AudioService.instance.PlayBGAudio(Constants.BGLogin);
-             GameRoot.AddTips("111");
-             GameRoot.AddTips("222");
-             GameRoot.AddTips("333");
          });
+    }
+
+    public void Response()
+    {
+        //提示
+        GameRoot.AddTips("登录成功");
+        //关闭面板
+        loginWindow.SetWindowState(false);
+        //打开面板
+        creatWindow.SetWindowState();
     }
 }

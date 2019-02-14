@@ -10,7 +10,12 @@ using UnityEngine;
 
 public class Constants  
 {
+    //登录场景名称
     public const string SceneLogin = "SceneLogin";
-	
+	//背景音乐
 	public const string BGLogin = "bgLogin";
+    //点击登录音效
+    public const string uiLoginBtn = "uiLoginBtn";
+    //普通点击音效
+    public const string btnEffect = "uiClickBtn";
 }
