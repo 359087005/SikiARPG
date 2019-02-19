@@ -1,24 +1,22 @@
-
-
-
 using UnityEngine;
 using PEProtocol;
+using PENet;
 
 //客户端网络回话
-public class ClientSession : PENet.PESession<GameMsg>
+public class ClientSession : PESession<GameMsg>
 {
 	protected override void OnConnected()
 	{
-		Debug.Log("Server Connect");
+		PECommon.Log("Server Connect");
 	}
 
 	protected override void OnDisConnected()
 	{
-		Debug.Log("Server DisConnect");
+		PECommon.Log("Server DisConnect");
 	}
-	
-	protected override void OnReceiveMsg(GameMsg msg)
-	{
-		Debug.Log("Server Receive:" + msg.text);
-	}
+
+    protected override void OnReciveMsg(GameMsg msg)
+    {
+        PECommon.Log("Receive Msg:");
+    }
 }

@@ -10,14 +10,16 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SystemRoot: MonoBehaviour 
+public class SystemRoot : MonoBehaviour
 {
-   protected ResService resService;
-	protected AudioService audioService;
+    protected ResService resService;
+    protected AudioService audioService;
+    protected NetService netService;
 
-	public virtual void Init()
-	{
-		resService = ResService.instance;
-		audioService = AudioService.instance;
-	}
+    public virtual void Init()
+    {
+        resService = ResService.instance;
+        audioService = AudioService.instance;
+        netService = NetService.instance;
+    }
 }

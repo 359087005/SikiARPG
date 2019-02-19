@@ -15,7 +15,7 @@ public class LoginSystem
 
     public void Init()
     {
-        PETool.LogMsg("登录系统初始化完成...");
+        PECommon.Log("登录系统初始化完成...");
     }
 }
 

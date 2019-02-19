@@ -21,7 +21,7 @@ public class ResService : MonoBehaviour
         instance = this;
 
         InitRdmName();
-        Debug.Log("ResLoading...");
+        PECommon.Log("ResLoading...");
     }
 
     private Action sceneAsyncAction = null;

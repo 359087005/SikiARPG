@@ -18,7 +18,7 @@ public class LoginSystem : SystemRoot
     {
         base.Init();
         instance = this;
-        Debug.Log("LoginInit...");
+        PECommon.Log("LoginInit...");
     }
 
     public void EnterLogin()

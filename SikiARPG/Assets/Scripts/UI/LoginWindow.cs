@@ -6,6 +6,7 @@
 	功能：登录窗口
 *****************************************************/
 
+using PEProtocol;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,9 +47,16 @@ public class LoginWindow : GameUIRoot
             PlayerPrefs.SetString("PassWord", passWord);
 
             //todo发送网络消息 请求登录
-
-            //登录回应
-            LoginSystem.instance.Response();
+            GameMsg msg = new GameMsg
+            {
+                cmd = (int)CMD.ReqLogin,
+               reqLogin = new ReqLogin
+               {
+                   account = account,
+                   password = passWord
+               }
+            };
+            netService.SendMsg(msg);
         }
         else
         {

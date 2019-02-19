@@ -250,6 +250,18 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114003165637050002, guid: 2fe91bd2396ae534ab079b21905173bd,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 233acc5896e62f142a7b1e1b734f7ec7,
+        type: 3}
+    - target: {fileID: 114271949289380486, guid: 2fe91bd2396ae534ab079b21905173bd,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 233acc5896e62f142a7b1e1b734f7ec7,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2fe91bd2396ae534ab079b21905173bd, type: 2}
   m_IsPrefabParent: 0
@@ -513,7 +525,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1823439102275856, guid: a79591d9a334c3a40a4400914b5f1a38, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a79591d9a334c3a40a4400914b5f1a38, type: 2}
@@ -743,6 +755,7 @@ GameObject:
   - component: {fileID: 1510049848}
   - component: {fileID: 1510049850}
   - component: {fileID: 1510049847}
+  - component: {fileID: 1510049851}
   m_Layer: 0
   m_Name: GameRoot
   m_TagString: Untagged
@@ -817,6 +830,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgAudio: {fileID: 1590435646}
   uiAudio: {fileID: 1965426527}
+--- !u!114 &1510049851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1510049845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa88480a6a46374a99a239c7c1c88a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1590435644
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,7 +881,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -20,7 +20,7 @@ public class AudioService: MonoBehaviour
     public void InitService()
     { 
         instance = this;
-        Debug.Log("AudioService Init...");
+        PECommon.Log("AudioService Init...");
     }
    
 	public void PlayBGAudio(string name,bool isloop = true)

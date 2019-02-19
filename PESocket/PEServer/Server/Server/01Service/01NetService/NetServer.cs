@@ -24,7 +24,7 @@ public class NetServer
         PESocket<ServerSession, GameMsg> server = new PESocket<ServerSession, GameMsg>();
         server.StartAsServer(ServerConfig.serverIP,ServerConfig.serverPort);
 
-        PETool.LogMsg("网络部分初始化完成...");
+        PECommon.Log("网络部分初始化完成...");
     }
 }
 

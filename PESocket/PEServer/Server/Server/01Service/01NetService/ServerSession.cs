@@ -9,19 +9,17 @@ public class ServerSession : PESession<GameMsg>
 {
     protected override void OnConnected()
     {
-        PETool.LogMsg("CLient Connect");
-        SendMsg(new GameMsg { text = "欢迎连接" });
+        PECommon.Log("CLient Connect");
     }
 
     protected override void OnDisConnected()
     {
-        PETool.LogMsg("CLient DisConnect");
+        PECommon.Log("CLient DisConnect");
     }
 
     protected override void OnReciveMsg(GameMsg msg)
     {
-        PETool.LogMsg("CLient ReciveMsg:" + msg.text);
-        SendMsg(new GameMsg { text = "Service Res: " + msg.text});
+        PECommon.Log("CLient ReciveMsg:" + ((CMD)msg.cmd).ToString());
     }
 }
 

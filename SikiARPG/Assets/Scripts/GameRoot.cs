@@ -20,7 +20,7 @@ public class GameRoot : MonoBehaviour
         DontDestroyOnLoad(this);
 
 
-        Debug.Log("Game Start...");
+        PECommon.Log("Game Start...");
         Init();
     }
     /// <summary>
@@ -40,8 +40,8 @@ public class GameRoot : MonoBehaviour
     {
         //按顺序初始化模块
         //服务模块
-	NetService net = GetComponent<NetService>();
-	net.InitNetService();
+        NetService net = GetComponent<NetService>();
+        net.InitNetService();
         ResService res = GetComponent<ResService>();
         res.InitRes();
         AudioService audio = GetComponent<AudioService>();

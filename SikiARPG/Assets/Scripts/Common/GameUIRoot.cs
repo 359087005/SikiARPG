@@ -13,6 +13,7 @@ public class GameUIRoot : MonoBehaviour
 {
     protected ResService res = null;
     protected AudioService audioService = null;
+    protected NetService netService = null;
 
     public void SetWindowState(bool isActive = true)
     {
@@ -29,12 +30,14 @@ public class GameUIRoot : MonoBehaviour
     {
         res = ResService.instance;
         audioService = AudioService.instance;
+        netService = NetService.instance;
     }
 
     protected virtual void ClearWindow()
     {
         res = null;
         audioService = null;
+        netService = null;
     }
 
     #region Tool
