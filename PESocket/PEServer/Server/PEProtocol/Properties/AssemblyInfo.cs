@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("PESocketExamle")]
+[assembly: AssemblyTitle("PEProtocol")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("PESocketExamle")]
+[assembly: AssemblyProduct("PEProtocol")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("ae5d57b7-3634-4cda-b913-774a5619924a")]
+[assembly: Guid("57a1b2bb-66d8-4ca4-969d-1e4188eae130")]
 
 // 程序集的版本信息由下列四个值组成: 
 //
