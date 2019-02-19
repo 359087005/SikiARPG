@@ -12,9 +12,9 @@ namespace PEProtocol
         public string text;
     }
 
-    public class ServiceConfig
+    public class ServerConfig
     {
-        public const string serviceIP = "127.0.0.1";
-        public const int servicePort = 17666;
+        public const string serverIP = "127.0.0.1";
+        public const int serverPort = 17666;
     }
 }
