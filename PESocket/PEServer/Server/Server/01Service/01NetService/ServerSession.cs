@@ -20,6 +20,7 @@ public class ServerSession : PESession<GameMsg>
     protected override void OnReciveMsg(GameMsg msg)
     {
         PECommon.Log("CLient ReciveMsg:" + ((CMD)msg.cmd).ToString());
+        NetServer.Instance.AddMsgQueue(this,msg);
     }
 }
 

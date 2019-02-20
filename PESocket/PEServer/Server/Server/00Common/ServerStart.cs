@@ -1,4 +1,6 @@
-﻿
+﻿using System;
+using System.Text.RegularExpressions;
+
 public class ServerStart
 {
     static void Main(string[] args)
@@ -7,7 +9,7 @@ public class ServerStart
 
         while (true)
         {
-
+            ServerRoot.Instance.Update();
         }
     }
 }

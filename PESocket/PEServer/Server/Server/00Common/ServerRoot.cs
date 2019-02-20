@@ -21,11 +21,17 @@ public class ServerRoot
         //数据层 TODO
 
         //服务层
+        CacheService.Instance.Init();
         NetServer.Instance.Init();
 
         //业务系统层
         LoginSystem.Instance.Init();
 
+    }
+
+    public void Update()
+    {
+        NetServer.Instance.Update();
     }
 }
 
