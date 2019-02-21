@@ -39,7 +39,8 @@ namespace PEProtocol
     public enum ErrorCode
     {
         None = 0,
-        AccIsOnLine = 1,
+        AccIsOnLine = 1,//账号已上线
+        PassError = 2//密码错误
     }
 
     public enum CMD

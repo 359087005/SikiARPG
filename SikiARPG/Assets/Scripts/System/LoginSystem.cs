@@ -6,6 +6,7 @@
 	功能：登录系统
 *****************************************************/
 
+using PEProtocol;
 using UnityEngine;
 
 public class LoginSystem : SystemRoot
@@ -31,13 +32,22 @@ public class LoginSystem : SystemRoot
          });
     }
 
-    public void Response()
+    public void Response(GameMsg msg)
     {
         //提示
         GameRoot.AddTips("登录成功");
+
+        GameRoot.instance.SetPlayData(msg.rspLogin);
+        if (msg.rspLogin.playerData.name == "")
+        {
+            //打开面板
+            creatWindow.SetWindowState();
+        }
+        else
+        {
+            //进入主城 todo
+        }
         //关闭面板
         loginWindow.SetWindowState(false);
-        //打开面板
-        creatWindow.SetWindowState();
     }
 }

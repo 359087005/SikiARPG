@@ -38,10 +38,6 @@ public class LoginSystem
         GameMsg msg =  new GameMsg
         {
             cmd = (int)CMD.RspLogin,
-            rspLogin = new RspLogin
-            {
-
-            }
         };
         //当前账号是否上线
         if (cacheService.isAccountOnLine(req.account))
@@ -52,9 +48,22 @@ public class LoginSystem
         else
         {
             //未上线 
+            PlayerData _playdata = cacheService.GetPlayData(req.account,req.password);
             //账号是否存在
-            //存在  检测密码
-            //不存在 创建默认账号密码（应该是存入数据库之类的）
+            if (_playdata == null)
+            {
+                //为空 说明密码错误
+                msg.err = (int)ErrorCode.PassError;
+            }
+            else
+            {
+                msg.rspLogin = new RspLogin
+                {
+                    playerData = _playdata
+                };
+            }
+            //缓存账号数据
+            cacheService.CachePlayerInfo(req.account,pack.serverSession, _playdata);
         }
         //回应客户端
         pack.serverSession.SendMsg(msg);

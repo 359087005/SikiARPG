@@ -9,12 +9,18 @@
 using UnityEngine;
 using PENet;
 using PEProtocol;
+using System.Collections.Generic;
 
 public class NetService : MonoBehaviour
 {
     public static NetService instance = null;
 
     PESocket<ClientSession, GameMsg> client = null;
+
+    private Queue<GameMsg> msgQueue = new Queue<GameMsg>();
+
+    public static readonly string lockObj = "lock";
+
 
     public void InitNetService()
     {
@@ -52,6 +58,23 @@ public class NetService : MonoBehaviour
         PECommon.Log("NetService Init...");
     }
 
+    /// <summary>
+    /// 消息添加到队列
+    /// </summary>
+    /// <param name="msg"></param>
+    public void AddMsgQueue(GameMsg msg)
+    {
+        lock (lockObj)
+        {
+            msgQueue.Enqueue(msg);
+        }
+    }
+
+
+    /// <summary>
+    /// 发送消息
+    /// </summary>
+    /// <param name="msg"></param>
     public void SendMsg(GameMsg msg)
     {
         if (client.session != null)
@@ -68,7 +91,38 @@ public class NetService : MonoBehaviour
 
     private void Update()
     {
-       
+        if (msgQueue.Count > 0)
+        {
+          GameMsg msg =  msgQueue.Dequeue();
+            HandOut(msg);
+        }
     }
 
+    /// <summary>
+    /// 处理消息
+    /// </summary>
+    /// <param name="msg"></param>
+    private void HandOut(GameMsg msg)
+    {
+        //判断消息是否有意义
+        if (msg.err != (int)ErrorCode.None)
+        {
+            switch ((ErrorCode)msg.err)
+            {
+                case ErrorCode.AccIsOnLine:
+                    GameRoot.AddTips("账号已在线");
+                    break;
+                case ErrorCode.PassError:
+                    GameRoot.AddTips("密码错误");
+                    break;
+            }
+            return;
+        }
+        switch ((CMD)msg.cmd)
+        {
+            case CMD.RspLogin:
+                LoginSystem.instance.Response(msg);
+                break;
+        }
+    }
 }

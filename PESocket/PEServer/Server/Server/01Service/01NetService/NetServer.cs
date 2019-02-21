@@ -41,9 +41,12 @@ public class NetServer
     {
         if (msgQueue.Count > 0)
         {
-            PECommon.Log("msgQueueCount : " + msgQueue.Count);
-            PackMsg pack = msgQueue.Dequeue();
-            HandOut(pack);
+            lock (lockObj)
+            {
+                PECommon.Log("msgQueueCount : " + msgQueue.Count);
+                PackMsg pack = msgQueue.Dequeue();
+                HandOut(pack);
+            }
         }
     }
 
