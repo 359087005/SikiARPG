@@ -15,9 +15,13 @@ class Program
         //Add();
 
         //删
+        Delete();
+
         //改
+        Update();
+
         //查
-        Query();
+        //Query();
 
         Console.ReadKey();
         conn.Close();
@@ -34,12 +38,20 @@ class Program
 
     static void Delete()
     {
+        MySqlCommand cmd = new MySqlCommand("delete from  userinfo  where id = 1", conn);
+        cmd.ExecuteNonQuery();
 
+        Console.WriteLine("delete done");
     }
 
     static void Update()
     {
 
+        //MySqlCommand cmd = new MySqlCommand("update  userinfo set name = 'bbb',age=12 where id = 1", conn);
+        MySqlCommand cmd = new MySqlCommand("update  userinfo set name = @name',age=@age where id =@id", conn);
+        cmd.Parameters.AddWithValue("name","ccc");
+        cmd.Parameters.AddWithValue("age",11);
+        cmd.Parameters.AddWithValue("id",2);
     }
 
     static void Query()
