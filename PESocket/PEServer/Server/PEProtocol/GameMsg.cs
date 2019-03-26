@@ -11,6 +11,9 @@ namespace PEProtocol
     {
         public ReqLogin reqLogin;
         public RspLogin rspLogin;
+
+        public ReqRename reqRename;
+        public RspRename rspRename;
     }
     [Serializable]
     public class ReqLogin
@@ -24,6 +27,20 @@ namespace PEProtocol
     {
         public PlayerData playerData;
     }
+
+    [Serializable]
+    public class ReqRename
+    {
+        public string name;
+    }
+
+    [Serializable]
+    public class RspRename
+    {
+        public string name;
+    }
+
+
     [Serializable]
     public class PlayerData
     {
@@ -40,7 +57,8 @@ namespace PEProtocol
     {
         None = 0,
         AccIsOnLine = 1,//账号已上线
-        PassError = 2//密码错误
+        PassError = 2,//密码错误
+        NameExist = 3//名字已存在
     }
 
     public enum CMD
@@ -48,7 +66,10 @@ namespace PEProtocol
         NONE = 0,
 
         ReqLogin = 101,
-        RspLogin = 102
+        RspLogin = 102,
+
+        ReqRename = 103,
+        RspRename = 104
     }
 
     public class ServerConfig

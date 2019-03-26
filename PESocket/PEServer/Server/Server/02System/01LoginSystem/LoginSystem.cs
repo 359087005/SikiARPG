@@ -68,5 +68,14 @@ public class LoginSystem
         //回应客户端
         pack.serverSession.SendMsg(msg);
     }
+
+    /// <summary>
+    /// 重命名请求
+    /// </summary>
+    /// <param name="pack"></param>
+    public void ReqRename(PackMsg pack)
+    {
+
+    }
 }
 

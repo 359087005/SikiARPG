@@ -1,0 +1,9 @@
+D:\UnityProject\sikiARPG\TestMySql\TestMySql\TestMySql\bin\Debug\TestMySql.exe.config
+D:\UnityProject\sikiARPG\TestMySql\TestMySql\TestMySql\bin\Debug\TestMySql.exe
+D:\UnityProject\sikiARPG\TestMySql\TestMySql\TestMySql\bin\Debug\TestMySql.pdb
+D:\UnityProject\sikiARPG\TestMySql\TestMySql\TestMySql\bin\Debug\MySql.Data.dll
+D:\UnityProject\sikiARPG\TestMySql\TestMySql\TestMySql\obj\Debug\TestMySql.csprojAssemblyReference.cache
+D:\UnityProject\sikiARPG\TestMySql\TestMySql\TestMySql\obj\Debug\TestMySql.csproj.CoreCompileInputs.cache
+D:\UnityProject\sikiARPG\TestMySql\TestMySql\TestMySql\obj\Debug\TestMySql.csproj.CopyComplete
+D:\UnityProject\sikiARPG\TestMySql\TestMySql\TestMySql\obj\Debug\TestMySql.exe
+D:\UnityProject\sikiARPG\TestMySql\TestMySql\TestMySql\obj\Debug\TestMySql.pdb

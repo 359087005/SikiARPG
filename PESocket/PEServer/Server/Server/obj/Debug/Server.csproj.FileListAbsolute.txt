@@ -1,0 +1,13 @@
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\obj\Debug\Server.csprojAssemblyReference.cache
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\bin\Debug\Server.exe
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\bin\Debug\Server.pdb
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\bin\Debug\PEProtocol.dll
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\bin\Debug\PESocket.dll
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\bin\Debug\PEProtocol.pdb
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\bin\Debug\PESocket.pdb
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\obj\Debug\Server.csproj.CopyComplete
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\obj\Debug\Server.exe
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\obj\Debug\Server.pdb
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\bin\Debug\Server.exe.config
+D:\UnityProject\sikiARPG\PESocket\PEServer\Server\Server\bin\Debug\MySql.Data.dll

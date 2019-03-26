@@ -59,7 +59,8 @@ public class NetServer
             case CMD.ReqLogin:
                 LoginSystem.Instance.ReqLogin(pack);
                 break;
-            case CMD.RspLogin:
+            case CMD.ReqRename:
+
                 break;
         }
     }

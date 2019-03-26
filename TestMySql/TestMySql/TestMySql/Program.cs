@@ -1,7 +1,6 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 
-
 class Program
 {
     static MySqlConnection conn = null;

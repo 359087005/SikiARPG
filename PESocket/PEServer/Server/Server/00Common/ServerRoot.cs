@@ -18,7 +18,8 @@ public class ServerRoot
 
     public void Init()
     {
-        //数据层 TODO
+        //数据层
+        DataBaseManager.Instance.Init();
 
         //服务层
         CacheService.Instance.Init();
