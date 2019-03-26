@@ -17,10 +17,8 @@ public class CacheService
         }
     }
 
-    private DataBaseManager db = null;
     public void Init()
     {
-        db = DataBaseManager.Instance;
         PECommon.Log("数据缓存初始化完成...");
     }
     //key账号  value session
@@ -45,9 +43,8 @@ public class CacheService
     /// <returns></returns>
     public PlayerData GetPlayData(string account,string password)
     {
-        PlayerData pd = db.QueryPlayerData(account,password);
-
-        return pd;
+        //todo
+        return null;
     }
     /// <summary>
     /// 缓存玩家数据
